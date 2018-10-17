@@ -2,7 +2,7 @@ sudo: required
 before_script:
 #- wget https://raw.githubusercontent.com/ckan/ckan/ckan-2.7.4/ckan/config/solr/schema.xml
 #- curl -sSL https://raw.githubusercontent.com/moliware/travis-solr/master/travis-solr.sh | DEBUG=true SOLR_CORE=ckan SOLR_VERSION=4.7.2 SOLR_CONFS="schema.xml" SOLR_DOCS=custom_docs.json bash
-echo "Installing solr 4.7.2"
+- echo "Installing solr 4.7.2"
 - cd /opt
 - sudo wget http://archive.apache.org/dist/lucene/solr/4.7.2/solr-4.7.2.tgz
 - sudo tar -xvf solr-4.7.2.tgz
