@@ -1,6 +1,6 @@
 before_script:
 - wget https://raw.githubusercontent.com/ckan/ckan/ckan-2.7.4/ckan/config/solr/schema.xml
-- curl -sSL https://raw.githubusercontent.com/moliware/travis-solr/master/travis-solr.sh | DEBUG=true SOLR_VERSION=4.7.2 SOLR_CONFS="schema.xml" SOLR_DOCS=custom_docs.json bash
+- curl -sSL https://raw.githubusercontent.com/moliware/travis-solr/master/travis-solr.sh | DEBUG=true SOLR_CORE=ckan SOLR_VERSION=4.7.2 SOLR_CONFS="schema.xml" SOLR_DOCS=custom_docs.json bash
 
 script:
-- curl http://localhost:8983/solr/
+- curl http://localhost:8983/solr/ckan/
